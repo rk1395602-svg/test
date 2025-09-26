@@ -1,0 +1,14 @@
+import pandas as pd 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+df=pd.read_csv('mtcars.csv') 
+print(df.head(10)) 
+print(plt.hist(x=df['mpg'])) 
+print(plt.scatter(x='wt',y='mpg',data=df))
+print(df['am'].value_counts().plot(kind='bar')) 
+print(sns.boxplot(df['mpg'])) 
+print(df['mpg'].min())
+10.4                                                                                 
+print(df['mpg'].max()) 
+33.9 
+print(df['mpg'].quantile([.1, .25, .5, .75]))
